@@ -4,7 +4,7 @@ def longest_palindrome(s):
 
     start, max_len = 0, 1
 
-    def expand_from_center(left: int, right: int) -> None:
+    def expand_from_center(left, right):
         nonlocal start, max_len
         while left >= 0 and right < len(s) and s[left] == s[right]:
             if right - left + 1 > max_len:
